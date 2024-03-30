@@ -1,0 +1,128 @@
+.home-hero {
+  position: relative;
+  isolation: isolate;
+  margin-bottom: 4%;
+  padding: 90px 0;
+}
+
+.home-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-color: rgba(25, 60, 157, 0.85)
+}
+
+
+.home-hero__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.home-hero__title {
+  position: relative;
+  width: 10em;
+  margin-bottom: 50px;
+  text-align: center;
+  font-size: calc(25px + (46 - 25) * ((100vw - 320px) / (1920 - 320)));
+}
+
+.home-hero__title::after {
+  content: '';
+  position: absolute;
+  top: 2.5em;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20%;
+  height: 4px;
+  background-color: #f9b109;
+}
+
+.home-hero__strong {}
+
+.home-hero__list {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
+  width: 100%;
+}
+
+.home-hero__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  max-width: 100%;
+  min-height: 240px;
+  padding: 20px;
+  isolation: isolate;
+}
+
+
+.home-hero__item::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+
+.home-hero__link {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.home-hero__icon {
+  width: 50px;
+  height: 50px;
+  fill: transparent;
+  stroke: #f9b109;
+}
+
+.home-hero__icon-different {
+  fill: #f9b109;
+}
+
+
+.home-hero__subtitle {
+  position: relative;
+  color: #fff;
+  font-weight: 600;
+}
+
+.home-hero__subtitle::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -7px;
+  width: 0;
+  height: 3px;
+  background-color: #f9b109;
+  transform: translateX(-50%);
+  transition: width 0.4s;
+}
+
+.home-hero__item:hover .home-hero__subtitle::after {
+  width: 100%;
+}
+
+@media(min-width:768px) {
+  .home-hero__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media(min-width:992px) {
+  .home-hero__list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

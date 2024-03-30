@@ -1,0 +1,137 @@
+.hero-services {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  margin-bottom: 4%;
+  padding: 90px 0;
+}
+
+.hero-services::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-color: rgba(25, 60, 157, 0.85)
+}
+
+.hero-services__container {}
+
+.hero-services__title {
+  position: relative;
+}
+
+.hero-services__title::after {
+  content: "";
+  position: absolute;
+  bottom: -0.300em;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 4px;
+  background-color: #f9b109;
+}
+
+.specialists {
+  margin-bottom: 4%;
+}
+
+.specialists__container {}
+
+.specialists__title-box {
+  margin-bottom: 35px;
+  max-width: 700px;
+  margin: 0 auto 60px auto;
+}
+
+.specialists__title {
+  position: relative;
+  margin-bottom: 35px;
+}
+
+.specialists__title::after {
+  content: "";
+  position: absolute;
+  bottom: -0.300em;
+  left: 0.100em;
+  width: 40px;
+  height: 4px;
+  background-color: #f9b109;
+}
+
+.specialists__title-link {
+  padding-bottom: 2px;
+  transition: box-shadow 0.3s;
+}
+
+.specialists__title-link:hover {
+  box-shadow: 0 2px 0 0 #f9b109;
+}
+
+.specialists__strong {}
+
+.specialists__text {
+  text-align: justify;
+}
+
+.specialists__list {
+  display: grid;
+  gap: 30px;
+}
+
+.specialists__item {
+  border: 1px solid #e1e7ec;
+  transition: box-shadow 0.3s, scale 0.3s;
+}
+
+@media (pointer:fine) and (hover: hover) {
+  .specialists__item:hover {
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.1);
+    scale: 1.03;
+  }
+}
+
+.specialists__img {}
+
+.specialists__box {
+  position: relative;
+  padding: 30px;
+}
+
+
+.specialists__icon {
+  position: absolute;
+  top: -20px;
+  left: 45%;
+  width: 45px;
+  height: 45px;
+  padding: 5px;
+  fill: #fff;
+  border-radius: 50%;
+  background-color: #f9b109;
+}
+
+.specialists__icon_different {
+  stroke: #fff;
+  fill: #f9b109;
+}
+
+.specialists__small-title {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.specialists__small-text {
+  line-height: 1.5em;
+}
+
+@media(min-width:768px) {
+  .specialists__list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media(min-width:992px) {
+  .specialists__list {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

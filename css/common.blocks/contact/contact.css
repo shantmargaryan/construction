@@ -1,0 +1,56 @@
+.contact {
+  margin-bottom: 4%;
+}
+
+.contact__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+
+.contact__map {
+  width: 100%;
+}
+
+.contact__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 20px;
+  width: 100%;
+}
+
+.contact__item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.contact__icon {
+  width: 50px;
+  height: 50px;
+  fill: #f9b109;
+}
+
+.contact__text {}
+
+.contact__title {
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.contact__link {
+  display: block;
+  transition: color 0.3s;
+}
+
+.contact__link:hover {
+  color: #f9b109;
+  text-decoration: 2px solid underline #f9b109;
+}
+
+.contact__link:not(:last-child) {
+  margin-bottom: 10px;
+}

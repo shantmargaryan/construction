@@ -1,0 +1,40 @@
+.burger {
+    --width: 40px;
+    --height: 40px;
+    --height-line: 4px;
+    --center: calc((var(--height) / 2) - (var(--height-line) / 2));
+    --center-: calc((var(--height) / -2) - (var(--height-line) / -2));
+    position: relative;
+    z-index: 12;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: var(--width);
+    height: var(--height);
+    padding: 9px;
+    border: 2px solid #f9b109;
+}
+
+.burger__line {
+    height: var(--height-line);
+    width: 100%;
+    background-color: #f9b109;
+}
+
+.burger_active {
+    background-color: #f9b109;
+    transition: background-color 0.5s;
+}
+
+.burger_active .burger__line {
+    background-color: #fff;
+    transition: background-color 0.5s;
+}
+
+
+
+@media(min-width:1200px) {
+    .burger {
+        display: none;
+    }
+}
