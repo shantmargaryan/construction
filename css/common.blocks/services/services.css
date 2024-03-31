@@ -20,6 +20,18 @@
   position: relative;
 }
 
+.hero-services__title.scroll-anim {
+  transition: opacity 0.4s, transform 0.4s;
+  transform: translateY(-20px);
+  opacity: 0;
+}
+
+
+.hero-services__title.scroll-anim_active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
 .hero-services__title::after {
   content: "";
   position: absolute;
@@ -48,6 +60,18 @@
   margin-bottom: 35px;
 }
 
+
+.specialists__title.scroll-anim {
+  transition: opacity 0.5s, transform 0.5s;
+  transform: translateY(-20px);
+  opacity: 0;
+}
+
+.specialists__title.scroll-anim_active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
 .specialists__title::after {
   content: "";
   position: absolute;
@@ -73,6 +97,17 @@
   text-align: justify;
 }
 
+.specialists__text.scroll-anim {
+  transition: opacity 0.7s, transform 0.7s;
+  transform: translateY(-20px);
+  opacity: 0;
+}
+
+.specialists__text.scroll-anim_active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
 .specialists__list {
   display: grid;
   gap: 30px;
@@ -80,7 +115,20 @@
 
 .specialists__item {
   border: 1px solid #e1e7ec;
-  transition: box-shadow 0.3s, scale 0.3s;
+}
+
+.specialists__item.scroll-anim {
+  transition: opacity 0.7s, transform 0.7s,
+    box-shadow 0.3s,
+    scale 0.3s;
+  transform: translateY(20px);
+  opacity: 0;
+}
+
+
+.specialists__item.scroll-anim_active {
+  transform: translateY(0);
+  opacity: 1;
 }
 
 @media (pointer:fine) and (hover: hover) {

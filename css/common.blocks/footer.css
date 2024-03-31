@@ -86,12 +86,17 @@
 
 .footer__copyright-text {}
 
-.footer__copyright-links {
-}
+.footer__copyright-links {}
+
 
 .footer__copyright-link {
   position: relative;
   color: #fff;
+  transition: color 0.3s;
+}
+
+.footer__copyright-link:hover {
+  color: #f9b109;
 }
 
 .footer__copyright-link:not(:last-child) {
