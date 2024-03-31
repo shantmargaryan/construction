@@ -159,11 +159,11 @@ function nextImage() {
    showLightBox(index);
 }
 
-lightboxPrev.addEventListener("click", prevImage);
-lightboxNext.addEventListener("click", nextImage);
+lightboxPrev?.addEventListener("click", prevImage);
+lightboxNext?.addEventListener("click", nextImage);
 
 
-lightbox.addEventListener("click", (event) => {
+lightbox?.addEventListener("click", (event) => {
    if (event.target === lightboxWrapper) {
       lightbox.style.opacity = "0"
       lightbox.style.pointerEvents = "none";
