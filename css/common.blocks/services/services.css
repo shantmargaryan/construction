@@ -18,6 +18,7 @@
 
 .hero-services__title {
   position: relative;
+  text-align: center;
 }
 
 .hero-services__title.scroll-anim {
@@ -150,8 +151,6 @@
   position: absolute;
   top: -20px;
   left: 45%;
-  width: 45px;
-  height: 45px;
   padding: 5px;
   fill: #fff;
   border-radius: 50%;

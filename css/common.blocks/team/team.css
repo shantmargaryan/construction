@@ -91,6 +91,7 @@
   width: 30px;
   height: 30px;
   fill: #f9b109;
+  stroke: transparent;
   flex-shrink: 0;
 }
 

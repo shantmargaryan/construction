@@ -108,6 +108,7 @@ setTimeout(getScrollAnimation, 700);
 const projectItem = document.querySelectorAll(".project__item");
 const lightbox = document.querySelector(".lightbox");
 const lightboxWrapper = document.querySelector(".lightbox__wrapper");
+const lightboxContent = document.querySelector(".lightbox__content");
 const lightboxImg = document.querySelector(".lightbox__img");
 const lightboxClose = document.querySelector(".lightbox__close");
 const lightboxNext = document.querySelector(".lightbox__next");
@@ -116,14 +117,7 @@ const lightboxPrev = document.querySelector(".lightbox__prev");
 
 let index = 1
 
-
-function showLightBox(lightBox) {
-   if (lightbox > projectItem.length) {
-      index = 1
-   } else if (lightbox < 1) {
-      index = projectItem.length
-   }
-
+function showLightBox() {
    let imgLocation = projectItem[index - 1].children[0].getAttribute("src")
    lightboxImg.setAttribute("src", imgLocation);
 }
@@ -133,12 +127,11 @@ function currentImg() {
    lightbox.style.pointerEvents = "all"
 
    let imageIndex = parseInt(this.getAttribute("data-item"));
-   showLightBox(index = imageIndex);
+   index = imageIndex
+   showLightBox();
 }
 
-for (let i = 0; i < projectItem.length; i++) {
-   projectItem[i].addEventListener("click", currentImg);
-}
+projectItem.forEach(item => item.addEventListener("click", currentImg));
 
 function sliderImage(slider) {
    if (slider < 0) {
@@ -151,12 +144,12 @@ function sliderImage(slider) {
 
 function prevImage() {
    sliderImage(index -= 1);
-   showLightBox(index);
+   showLightBox();
 }
 
 function nextImage() {
    sliderImage(index += 1);
-   showLightBox(index);
+   showLightBox();
 }
 
 lightboxPrev?.addEventListener("click", prevImage);
@@ -164,11 +157,7 @@ lightboxNext?.addEventListener("click", nextImage);
 
 
 lightbox?.addEventListener("click", (event) => {
-   if (event.target === lightboxWrapper) {
-      lightbox.style.opacity = "0"
-      lightbox.style.pointerEvents = "none";
-   }
-   if (event.target === lightboxClose) {
+   if (event.target === lightboxClose || event.target === lightboxWrapper) {
       lightbox.style.opacity = "0"
       lightbox.style.pointerEvents = "none";
    }
@@ -176,3 +165,38 @@ lightbox?.addEventListener("click", (event) => {
 
 
 // end lightbox
+
+// start link
+
+// const homeLinks = document.querySelectorAll('.home-hero__link');
+// const subtitle = document.querySelectorAll('.home-hero__subtitle');
+
+// homeLinks.forEach(function (link) {
+//    link.addEventListener('click', function (event) {
+//       event.preventDefault();
+//       const subtitleText = this.querySelector(".home-hero__subtitle");
+//       localStorage.removeItem('content');
+//       console.log(this);
+//       console.log(subtitleText.textContent);
+//       if (subtitleText.textContent.includes("Electricity")) {
+//          localStorage.setItem('content', JSON.stringify(electricity));
+//       }
+
+//       if (subtitleText.textContent.includes("Heating")) {
+//          localStorage.setItem('content', JSON.stringify(heating));
+//       }
+//    })
+// });
+
+
+// const electricity = {
+//    title: "electricity",
+//    text: "electricty"
+// };
+
+// const heating = {
+//    title: "heating",
+//    text: "heating"
+// };
+
+// end link

@@ -72,6 +72,7 @@
   height: 30px;
   margin-right: 10px;
   fill: #f9b109;
+  stroke: transparent;
   flex-shrink: 0;
 }
 

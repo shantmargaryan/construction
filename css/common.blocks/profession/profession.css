@@ -1,0 +1,168 @@
+.different {
+  margin-bottom: 0;
+}
+
+.electricity {
+  margin-bottom: 4%;
+}
+
+.electricity__container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.electricity__wrapper {
+  max-width: 800px;
+}
+
+.electricity__top-box {
+  display: flex;
+  gap: 5px;
+  padding: 20px;
+  margin-bottom: 60px;
+  background-color: rgba(0, 0, 0, 0.03)
+}
+
+.electricity__link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: color 0.3s;
+}
+
+.electricity__link:hover {
+  color: #f9b109;
+}
+
+
+.electricity__icon {
+  width: 25px;
+  height: 25px;
+  fill: #f9b109;
+  stroke: transparent;
+  flex-shrink: 0;
+}
+
+.electricity__icon_arrow {
+  width: 15px;
+  height: 15px;
+}
+
+.electricity__text {
+  max-width: 800px;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+.electricity__table {
+  width: 70%;
+  margin-bottom: 40px;
+  border-collapse: collapse;
+}
+
+.electricity__table-thead {
+  background-color: #ccd5db;
+  border: 1px solid #ccd5db;
+}
+
+.electricity__table-head {
+  padding: 10px;
+  font-size: 16px;
+  text-align: left;
+  font-weight: 500;
+}
+
+.electricity__table-body {}
+
+.electricity__table-row {}
+
+.electricity__table-row:nth-child(2n) {
+  background-color: #f5f5f5;
+}
+
+.electricity__table-data {
+  padding: 10px;
+  color: #111;
+}
+
+
+.electricity__gallery-box {}
+
+.electricity__gallery-title {
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+.electricity__gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+}
+
+.electricity__gallery_img {}
+
+.electricity__aside {
+  width: 50%;
+}
+
+.electricity__links-title {
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  font-weight: 700;
+  font-size: 18px;
+  border-bottom: 2px solid #e1e7ec;
+}
+
+.electricity__links-box {}
+
+.electricity__links-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.electricity__link-item {
+  padding: 5px;
+  transition: background-color 0.3s;
+}
+
+.electricity__link-item:hover {
+  background-color: #f9b109;
+}
+
+.electricity__link-item:hover .electricity__services-link {
+  color: #fff;
+}
+
+.electricity__link-item:hover .electricity__services-icon {
+  stroke: #fff;
+}
+
+.electricity__services-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: color 0.3s;
+}
+
+.electricity__services-icon {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  transition: stroke 0.3s;
+}
+
+
+@media(min-width:768px) {
+  .electricity__gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media(min-width:768px) {
+  .electricity__container {
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+  }
+}
