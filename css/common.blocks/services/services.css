@@ -139,7 +139,10 @@
   }
 }
 
-.specialists__img {}
+.specialists__img {
+  max-width: 600px;
+  max-height: 350px;
+}
 
 .specialists__box {
   position: relative;
