@@ -58,6 +58,8 @@
 }
 
 .blog__img {
+  max-width: 600px;
+  height: 350px;
   margin-bottom: 20px;
 }
 
@@ -101,7 +103,10 @@
   border: 2px solid #e1e7ec;
 }
 
-.aside__img {}
+.aside__img {
+  max-width: 600px;
+  height: 350px;
+}
 
 .aside__box {
   padding: 20px;
