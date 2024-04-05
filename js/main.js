@@ -20,6 +20,7 @@ document.body.addEventListener("click", (e) => {
    }
 });
 
+
 burger.addEventListener("click", function () {
    burger.classList.toggle("burger_active");
    nav.classList.toggle("nav_active");
@@ -76,6 +77,8 @@ mediaQueryMinWidth_1200.addEventListener("change", (e) => {
    }
    return false;
 });
+
+
 
 
 // scroll animation
@@ -163,40 +166,19 @@ lightbox?.addEventListener("click", (event) => {
    }
 });
 
-
 // end lightbox
 
-// start link
 
-// const homeLinks = document.querySelectorAll('.home-hero__link');
-// const subtitle = document.querySelectorAll('.home-hero__subtitle');
-
-// homeLinks.forEach(function (link) {
-//    link.addEventListener('click', function (event) {
-//       event.preventDefault();
-//       const subtitleText = this.querySelector(".home-hero__subtitle");
-//       localStorage.removeItem('content');
-//       console.log(this);
-//       console.log(subtitleText.textContent);
-//       if (subtitleText.textContent.includes("Electricity")) {
-//          localStorage.setItem('content', JSON.stringify(electricity));
-//       }
-
-//       if (subtitleText.textContent.includes("Heating")) {
-//          localStorage.setItem('content', JSON.stringify(heating));
+// const resizeObserver = new ResizeObserver((entris) => {
+//    entris.forEach((entry) => {
+//       if (entry.contentRect.height) {
+//          console.log(entry.contentRect);
+//          if (!nav) {
+//             return
+//          }
+//          nav.style.paddingTop = entry.target.offsetHeight + "px";
 //       }
 //    })
 // });
 
-
-// const electricity = {
-//    title: "electricity",
-//    text: "electricty"
-// };
-
-// const heating = {
-//    title: "heating",
-//    text: "heating"
-// };
-
-// end link
+// resizeObserver.observe(header);
