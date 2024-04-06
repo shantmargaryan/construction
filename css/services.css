@@ -93,6 +93,10 @@
   }
 }
 
+.specialists__link {
+  cursor: pointer;
+}
+
 .specialists__img {
   max-width: 600px;
   max-height: 350px;

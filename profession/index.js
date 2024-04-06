@@ -1,8 +1,50 @@
-const links = document.querySelectorAll('.home-hero__link');
-const subtitle = document.querySelectorAll('.home-hero__subtitle');
-const innerLink = document.querySelector('.home-hero__link-electricity');
+const heroLinks = document.querySelectorAll('.home-hero__link');
+const servicesLink = document.querySelectorAll('.specialists__link');
+const electricityLink = document.querySelectorAll('.electricity__services-link');
 
-links.forEach(link => {
+
+servicesLink.forEach(link => {
+  link.addEventListener('click', e => {
+    localStorage.removeItem('content');
+    if (link.dataset.link === 'electricity') {
+      localStorage.setItem('content', JSON.stringify(object.electricity));
+    } else if (link.dataset.link === 'heating') {
+      localStorage.setItem('content', JSON.stringify(object.heating));
+    } else if (link.dataset.link === 'painting') {
+      localStorage.setItem('content', JSON.stringify(object.painting));
+    } else if (link.dataset.link === 'renovation') {
+      localStorage.setItem('content', JSON.stringify(object.renovation));
+    } else if (link.dataset.link === 'roofing') {
+      localStorage.setItem('content', JSON.stringify(object.roofing));
+    } else if (link.dataset.link === 'sanitary') {
+      localStorage.setItem('content', JSON.stringify(object.sanitary));
+    }
+    link.nextElementSibling.click()
+  })
+});
+
+heroLinks.forEach(link => {
+  link.addEventListener('click', e => {
+    localStorage.removeItem('content');
+    if (link.dataset.link === 'electricity') {
+      localStorage.setItem('content', JSON.stringify(object.electricity));
+    } else if (link.dataset.link === 'heating') {
+      localStorage.setItem('content', JSON.stringify(object.heating));
+    } else if (link.dataset.link === 'painting') {
+      localStorage.setItem('content', JSON.stringify(object.painting));
+    } else if (link.dataset.link === 'renovation') {
+      localStorage.setItem('content', JSON.stringify(object.renovation));
+    } else if (link.dataset.link === 'roofing') {
+      localStorage.setItem('content', JSON.stringify(object.roofing));
+    } else if (link.dataset.link === 'sanitary') {
+      localStorage.setItem('content', JSON.stringify(object.sanitary));
+    }
+    link.nextElementSibling.click()
+  })
+});
+
+
+electricityLink.forEach(link => {
   link.addEventListener('click', e => {
     localStorage.removeItem('content');
     if (link.dataset.link === 'electricity') {
